@@ -1,0 +1,13 @@
+This javascript code implements a very simple event class. The event
+handlers can be prioritized numerically or with the simple description
+of "low", "med", or "high". The class avoids using the DOM.
+
+Usage:
+Dispatch.subscribe('crazy.event', function(data) {
+                                  //do somethin crazy to data
+                                  });
+
+//specify priority
+Dispatch.subscribe('crazy.event', function() {}, 1);
+
+Dispatch.publish('crazy.event', {name:'thepug'});
